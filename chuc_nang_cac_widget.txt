@@ -1,0 +1,100 @@
+================================================================================
+          GIẢI THÍCH CHỨC NĂNG CÁC WIDGET FLUTTER TRONG LIB/MAIN.DART
+================================================================================
+
+1. StatelessWidget
+   - Chức năng: Widget tĩnh, không lưu trữ trạng thái thay đổi. Dùng khi giao diện 
+     chỉ cần dựng một lần và không bị thay đổi dữ liệu động trong suốt quá trình chạy.
+
+2. MaterialApp
+   - Chức năng: Widget bao ngoài cùng của ứng dụng, thiết lập cấu hình tổng thể 
+     theo chuẩn Material Design: cài đặt Theme (giao diện sáng/tối, màu sắc), 
+     phông chữ toàn app, tiêu đề (title) và màn hình khởi đầu (home).
+
+3. Scaffold
+   - Chức năng: Cung cấp khung sườn màn hình chuẩn, quản lý màu nền (backgroundColor)
+     và khu vực hiển thị nội dung chính (body).
+
+4. Center
+   - Chức năng: Căn widget con vào chính giữa màn hình theo cả 2 trục (ngang và dọc).
+
+5. MediaQuery
+   - Chức năng: Lấy thông số kích thước thực tế của màn hình thiết bị (screenWidth)
+     để hỗ trợ giao diện co giãn (Responsive): hiển thị khung điện thoại trên Desktop/Web 
+     và toàn màn hình trên điện thoại di động.
+
+6. Container
+   - Chức năng: Widget đa năng dùng như một "chiếc hộp", hỗ trợ định kích thước (width, height),
+     khoảng cách đệm (padding), khoảng cách ngoài (margin), màu nền, bo tròn góc, 
+     viền (border) và đổ bóng (boxShadow) thông qua thuộc tính BoxDecoration.
+
+7. SafeArea
+   - Chức năng: Tự động thụt lề an toàn để nội dung không bị che khuất bởi tai thỏ, 
+     Dynamic Island, thanh trạng thái pin/sóng (Status Bar) hoặc thanh điều hướng đáy máy.
+
+8. SingleChildScrollView
+   - Chức năng: Cho phép cuộn nội dung theo chiều dọc khi danh sách các phần tử dài hơn
+     chiều cao màn hình, giúp tránh lỗi tràn màn hình (Overflow error).
+
+9. BouncingScrollPhysics
+   - Chức năng: Tạo hiệu ứng cuộn dạng lò xo nảy mượt mà khi cuộn tới mép trên/dưới.
+
+10. Column
+   - Chức năng: Sắp xếp các widget con theo trục dọc (từ trên xuống dưới).
+
+11. Row
+   - Chức năng: Sắp xếp các widget con theo trục ngang (từ trái sang phải).
+
+12. Stack
+   - Chức năng: Cho phép các widget con xếp chồng đè lên nhau theo trục Z (chiều sâu).
+   - Áp dụng trong bài: Đặt huy hiệu tích xanh (Verified Badge) đè lên góc của ảnh đại diện.
+
+13. Positioned
+   - Chức năng: Dùng bên trong Stack để ghim vị trí tọa độ chính xác (top, bottom, left, right)
+     của widget con (ví dụ: ghim huy hiệu tại right: 4, bottom: 4).
+
+14. Wrap
+   - Chức năng: Tự động xếp các widget con theo dòng, và tự động ngắt dòng xuống hàng tiếp
+     theo khi hết khoảng trống chiều ngang.
+   - Áp dụng trong bài: Hiển thị các chip kỹ năng (Flutter, Dart, Clean Arch, UI/UX, Firebase).
+
+15. Expanded
+   - Chức năng: Kéo giãn widget con để chia đều hoặc lấp đầy khoảng trống còn lại trong Row/Column.
+   - Áp dụng trong bài: Chia đều 3 cột chỉ số (Projects, Experience, Rating) và 2 thẻ Featured Projects.
+
+16. SizedBox
+   - Chức năng: Tạo khoảng cách cố định (khoảng trống width hoặc height) giữa các widget lân cận, 
+     hoặc đặt kích thước cụ thể cho widget con.
+
+17. Text & TextStyle
+   - Chức năng: Hiển thị chuỗi văn bản lên màn hình. TextStyle giúp tùy biến cỡ chữ (fontSize),
+     độ đậm nhạt (fontWeight), màu sắc (color), khoảng cách chữ (letterSpacing) và chiều cao dòng (height).
+
+18. Icon
+   - Chức năng: Hiển thị biểu tượng đồ họa vector từ bộ Material Icons (ví dụ: icon ghim vị trí, 
+     ngôi sao đánh giá, mũi tên quay lại, hộp thư, điện thoại,...).
+
+19. Image.asset
+   - Chức năng: Tải và hiển thị ảnh tĩnh từ thư mục assets nội bộ của dự án (avatar, ảnh dự án).
+     Có kèm errorBuilder để hiển thị icon thay thế nếu ảnh bị thiếu.
+
+20. ClipOval
+   - Chức năng: Cắt (clip) hình ảnh hoặc widget con thành hình tròn/hình elip hoàn hảo 
+     (dùng tạo ảnh đại diện tròn).
+
+21. ClipRRect
+   - Chức năng: Cắt widget con theo hình chữ nhật bo tròn các góc (BorderRadius) 
+     (dùng bo tròn mép trên hình ảnh trong thẻ dự án và khung smartphone).
+
+22. InkWell
+   - Chức năng: Bắt sự kiện chạm/bấm (onTap) của người dùng kèm hiệu ứng lan tỏa sóng nước 
+     (ripple effect) mượt mà chuẩn Material.
+
+23. Divider
+   - Chức năng: Vẽ một đường kẻ ngang thanh mảnh 1px để phân cách các mục thông tin liên hệ.
+
+24. Align
+   - Chức năng: Căn lề widget con sang một hướng xác định (ví dụ: Alignment.centerLeft để 
+     căn sát lề trái cho các tiêu đề mục).
+
+================================================================================
